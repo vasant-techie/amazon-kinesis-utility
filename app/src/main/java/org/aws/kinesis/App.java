@@ -8,7 +8,7 @@ public class App {
         // Send data to the stream
         String streamName = "My1stKinesisDataStream";
         String partitionKey = "2";
-        String data = "வணக்கம்";
+        String data = "வணக்கம், India!";
         Producer.produce(streamName, partitionKey, data);
     }
 }
