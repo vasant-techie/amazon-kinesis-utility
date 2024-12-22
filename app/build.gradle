@@ -16,6 +16,12 @@ repositories {
 }
 
 dependencies {
+    implementation 'software.amazon.kinesis:amazon-kinesis-producer:1.0.0' // Kinesis Producer Library (KPL)
+    implementation 'software.amazon.awssdk:kinesis:2.20.40' // AWS SDK for Java v2 (for interacting with Kinesis)
+    implementation 'software.amazon.awssdk:auth:2.20.40' // Authentication library for AWS SDK
+    implementation 'software.amazon.awssdk:regions:2.20.40' // Regions support for AWS SDK
+    implementation 'software.amazon.kinesis:amazon-kinesis-client:2.5.6' // Kinesis Client Library (KCL)
+
     // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
 
@@ -34,7 +40,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'org.example.App'
+    mainClass = 'org.aws.kinesis.App'
 }
 
 tasks.named('test') {
